@@ -1,6 +1,6 @@
 # UWB_WebSocket
 
-[![License](https://img.shields.io/github/license/FlorentinTh/UWB_WebSocket)](https://github.com/FlorentinTh/UWB_WebSocket/blob/main/LICENSE)
+[![Release Version](https://img.shields.io/github/release/FlorentinTh/UWB_WebSocket)](https://github.com/FlorentinTh/UWB_WebSocket/releases) [![License](https://img.shields.io/github/license/FlorentinTh/UWB_WebSocket)](https://github.com/FlorentinTh/UWB_WebSocket/blob/main/LICENSE)
 
 A simple program that streams data produced by XeThru X4 UWB radars at 50Hz through WebSocket.
 
