@@ -24,33 +24,35 @@ A simple program that streams data produced by XeThru X4 UWB radars at 50Hz thro
 
     ```sh
     $ sudo apt update
-    $ sudo apt intall -y zip build-essential cmake \
-                        libboost-all-dev qt5-default \
-                        libqt5serialport5-dev
+    $ sudo apt intall -y qt5-default libqt5serialport5-dev
     ```
 
     * Download latest release:
     ```sh
-    $ curl -OL https://github.com/FlorentinTh/UWB_WebSocket/releases/latest/download/UWB-WebSocket-linux.zip
-    $ unzip UWB-WebSocket-linux.zip
-    $ cd UWB-WebSocket-linux
+    $ curl -sSL https://github.com/FlorentinTh/UWB_WebSocket/releases/latest/download/uwb-websocket_latest_amd64.deb
     ```
 
-    * Change files mode:
+    * Install the package:
 
     ```sh
-    $ sudo chmod a+x setup.sh UWB_WebSocket
+    $ sudo dpkg -i uwb-websocket_latest_amd64.deb
     ```
 
-    * Run the setup file:
+    * Link libraries:
     ```sh
-    $ ./setup.sh
+    $ echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/uwb-websocket" >> ~/.bashrc
+    $ source ~/.bashrc
     ```
 
-    * Start the app:
-    ```sh
-    $ ./UWB_WebSocket
-    ```
+## How to use it
+
+Inside the LIARA laboratory, the application is deployed on the linux server ```liara-srv0```. It's IP address is **192.168.1.10**. Hence, once you are connected inside the private network of the lab (either through a wired, or a wireless connection), you can access to the UWB WebSocket server through the following address :
+
+```
+ws://192.168.1.10:9002
+```
+
+> _**Note:** if the WebSocket server is not responding, ask for the recovery procedure in order to let you know how to restart the application remotely._
 
 ## License
 
